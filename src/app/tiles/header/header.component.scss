@@ -1,0 +1,51 @@
+mat-toolbar-row{
+    height: 56px;
+    justify-content: space-between;
+    button{
+        font-size: 13px;
+        height: 56px;
+        i{
+            margin-right: 10px;
+        }
+        &.logo{
+            font-size: 14px;
+        }
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+    .userinfo{
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        height: 56px;
+        padding: 0 15px;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+        cursor: pointer;
+        .userimg{
+            display: inline-flex;
+            align-items: center;
+        }
+        img{
+            width: 30px;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
+        .username{
+            margin-right: 10px;
+        }
+        &.search{
+            min-width: 20px;
+            border-left: 0;
+            i{
+                margin-right: 0; 
+            }
+        }
+    }
+}
+.mat-toolbar-multiple-rows{
+    min-height: 56px;
+}

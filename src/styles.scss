@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+*{
+    font-family: 'Source Sans Pro';
+}
+body, html {
+    height: 100vh;
+    margin: 0;
+    background: #f2f2f2;
+}
+ul, .mat-card-header-text{
+    margin: 0 !important;
+}
+.mat-radio-label-content{
+    font-size: 13px;
+}
+.white-snackbar{
+    background: #fff;
+    color: #000;
+}
+button:focus{
+    outline: none;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1185px;
+    }
+}

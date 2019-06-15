@@ -1,0 +1,113 @@
+.profile{
+   display: flex;
+}
+.leftpanel{
+    width: 30%;
+    .avatar{
+        width: 165px;
+        margin: 20px;
+        border-radius: 3px;
+    }
+    .work{
+        margin: 10px;
+        .head{
+            border-top: 1px solid #ddd;
+            display: block;
+            position: relative;
+            &:before{
+                content: 'WORK';
+                position: absolute;
+                font-size: 13px;
+                color: #777;
+                background: #fafafa;
+                top: -10px;
+                padding: 0 5px 0 10px;
+            }
+            .company{
+                font-size: 14px;
+                padding: 10px;
+                display: block;
+                margin-top: 10px; 
+            }
+            .address{
+                display: block;
+                padding: 0 10px;
+                font-size: 13px;
+                line-height: 20px;
+                color: #777;
+                span{
+                    display: block;
+                }
+            }
+        }
+        .skills{
+            border-top: 1px solid #ddd;
+            display: block;
+            position: relative;
+            margin-top: 30px; 
+            &:before{
+                content: 'SKILLS';
+                position: absolute;
+                font-size: 13px;
+                color: #777;
+                background: #fafafa;
+                top: -10px;
+                padding: 0 5px 0 10px;
+            }
+            .designation{
+                font-size: 14px;
+                padding: 10px;
+                display: block;
+                margin-top: 10px; 
+            }
+            .skill{
+                display: block;
+                padding: 0 10px;
+                font-size: 13px;
+                line-height: 20px;
+                color: #777;
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.rightpanel{
+    width: 70%;
+    .head{
+        margin: 20px 10px;
+    }
+    .user-det{
+        margin: 10px;
+    }
+    .ratingcontainer{
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        i{
+            width: 30px;
+            color: #d3eaf7;
+            &.fill{
+                color: #f0ad4e;
+            }
+        }
+    }
+    .name{
+        font-size: 21px;
+    }
+    .desig{
+        color: #22A7F0;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .location{
+        color: #777;
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .ratings{
+        font-size: 16px;
+        margin-right: 10px;
+    }
+}
