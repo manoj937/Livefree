@@ -1,0 +1,13 @@
+.bookmark, .env{
+    line-height: 0;
+    min-width: auto;
+}
+
+.footer{
+    .bordertop{
+        border: 0.5px solid #e5e5e5;
+        width: calc( 100% + 36px);
+        left: -18px;
+        top: 0;
+    }   
+}

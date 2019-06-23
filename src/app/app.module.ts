@@ -22,6 +22,9 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { ProfileInfoComponent } from './pages/home/profile-info/profile-info.component';
+import { PostInfoComponent } from './pages/home/post-info/post-info.component';
+import { JobInfoComponent } from './pages/home/job-info/job-info.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -46,7 +49,10 @@ const appRoutes: Routes = [
     ClientsComponent,
     TeamsComponent,
     ProductsComponent,
-    SettingsComponent
+    SettingsComponent,
+    ProfileInfoComponent,
+    PostInfoComponent,
+    JobInfoComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -4,30 +4,105 @@
 @import "~font-awesome/css/font-awesome.min.css";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
-*{
-    font-family: 'Source Sans Pro';
+$green-light: #53d690;
+$gray-light:#b2b2b2;
+$gray-lighter: #f2f2f2;
+$gray-dark: #aaaaaa;
+$gray-darker: #686868;
+$gray-border: #e5e5e5;
+$white: #ffffff;
+$black: #000000;
+
+$avatars: mano ananya mirnalini gayathri karthi gowtham mathu akash;
+
+@each $avatar in $avatars{
+    .#{$avatar}{
+        background-image: url("./assets/#{$avatar}.jpg");
+    }
 }
-body, html {
-    height: 100vh;
-    margin: 0;
-    background: #f2f2f2;
-}
-ul, .mat-card-header-text{
-    margin: 0 !important;
-}
-.mat-radio-label-content{
-    font-size: 13px;
-}
-.white-snackbar{
-    background: #fff;
-    color: #000;
-}
-button:focus{
-    outline: none;
+
+@for $i from 1 through 60{
+    .font-dec-#{$i}{
+        font-size: 0.1rem * $i;
+    }
+    
+    .letter-spacing-#{$i}{
+        letter-spacing: #{$i}px;
+    }
+
+    .size-#{$i}{
+        width: #{$i}px;
+        height: #{$i}px;
+    }
 }
 
 @media (min-width: 1200px){
     .container {
         max-width: 1185px;
     }
+}
+
+*{
+    font-family: 'Source Sans Pro';
+}
+
+body, html {
+    height: 100vh;
+    margin: 0;
+    background: $gray-lighter;
+}
+
+ul, .mat-card-header-text{
+    margin: 0 !important;
+}
+
+.mat-radio-label-content{
+    font-size: 13px;
+}
+
+.white-snackbar{
+    background: $white;
+    color: $black;
+}
+
+button:focus{
+    outline: none;
+}
+
+.right-card{
+    .mat-button-wrapper{
+        padding: 0 !important;
+    }
+}   
+
+.center-card{
+    mat-toolbar{
+        height: 4px;
+        top:0;
+        left:0;
+    }
+}
+
+.userimage {
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+}
+
+.color-light{
+    color: $gray-light;
+}
+
+.greenbg{
+    background: $green-light;
+}
+
+.desc{
+    color: $gray-darker;
+    line-height: 24px;
+}
+
+.worktype{
+    color: $gray-dark;
+    background-color: $gray-border;
 }
