@@ -18,10 +18,11 @@ $avatars: mano ananya mirnalini gayathri karthi gowtham mathu akash;
 @each $avatar in $avatars{
     .#{$avatar}{
         background-image: url("./assets/#{$avatar}.jpg");
+        background-size: cover;
     }
 }
 
-@for $i from 1 through 60{
+@for $i from 1 through 30{
     .font-dec-#{$i}{
         font-size: 0.1rem * $i;
     }
@@ -31,8 +32,8 @@ $avatars: mano ananya mirnalini gayathri karthi gowtham mathu akash;
     }
 
     .size-#{$i}{
-        width: #{$i}px;
-        height: #{$i}px;
+        width: 10px * $i !important;
+        height: 10px * $i !important;
     }
 }
 
@@ -81,12 +82,6 @@ button:focus{
         top:0;
         left:0;
     }
-}
-
-.userimage {
-    background-size: cover;
-    width: 60px;
-    height: 60px;
 }
 
 .color-light{
