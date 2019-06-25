@@ -1,0 +1,23 @@
+.right-card {
+    .chead{
+        border-bottom: 1px solid #e5e5e5;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0 15px;
+        li{
+            p{
+                line-height: 20px;
+            }
+            button{
+                box-shadow: none;
+                visibility: hidden;
+            }
+            &:hover{
+                button{
+                    visibility: visible;
+                }
+            }
+        }
+    }
+  }

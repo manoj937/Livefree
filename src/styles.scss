@@ -57,8 +57,8 @@ ul, .mat-card-header-text{
     margin: 0 !important;
 }
 
-.mat-radio-label-content{
-    font-size: 13px;
+mat-card-content{
+    margin-bottom: 0;
 }
 
 .white-snackbar{
@@ -86,6 +86,10 @@ button:focus{
 
 .color-light{
     color: $gray-light;
+}
+
+.color-darker{
+    color: $gray-darker;
 }
 
 .greenbg{

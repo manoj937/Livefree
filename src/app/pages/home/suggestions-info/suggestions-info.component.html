@@ -1,0 +1,27 @@
+<mat-card class="right-card p-0">
+  <div class="chead d-flex justify-content-between align-items-center mb-3 pr-2 pl-3 pt-1 pb-1">
+    <h3 class="font-dec-10 m-0 font-weight-bold text-dark">Suggestions</h3>
+    <button mat-icon-button>
+      <mat-icon class="color-light">more_vert</mat-icon>
+    </button>
+  </div>
+  <ul>
+    <li *ngFor="let suggestion of suggestions" class="align-items-center justify-content-between pb-3 d-flex">
+      <div class="d-flex align-items-center">
+          <div class="size-4 mr-2 {{suggestion.avatar}} mat-card-avatar"></div>
+          <div>
+            <h5 class="m-0 text-dark font-dec-9 font-weight-bold">{{suggestion.name}}</h5>
+            <p class="m-0 color-darker font-dec-9">{{suggestion.designation}}</p>
+          </div>
+      </div>
+      <div class="d-flex">
+        <button mat-mini-fab color="accent" class="mr-2 size-2 d-flex align-items-center justify-content-center">
+          <mat-icon class="font-dec-10">remove</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" class="mr-2 size-2 d-flex align-items-center justify-content-center">
+          <mat-icon class="font-dec-10">add</mat-icon>
+        </button>
+      </div>
+    </li>
+  </ul>
+</mat-card>

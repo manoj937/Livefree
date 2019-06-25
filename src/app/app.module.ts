@@ -25,6 +25,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { ProfileInfoComponent } from './pages/home/profile-info/profile-info.component';
 import { PostInfoComponent } from './pages/home/post-info/post-info.component';
 import { JobInfoComponent } from './pages/home/job-info/job-info.component';
+import { SuggestionsInfoComponent } from './pages/home/suggestions-info/suggestions-info.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,7 +53,8 @@ const appRoutes: Routes = [
     SettingsComponent,
     ProfileInfoComponent,
     PostInfoComponent,
-    JobInfoComponent
+    JobInfoComponent,
+    SuggestionsInfoComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

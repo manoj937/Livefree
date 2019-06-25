@@ -1,29 +1,29 @@
-<mat-card class="center-card mt-3">
+<mat-card *ngFor="let job of jobs" class="center-card mt-3 mb-3">
     <mat-card-header>
       <div class="d-flex flex-grow-1 align-items-center">
-          <div mat-card-avatar class="userimage gayathri size-5"></div>
+          <div class="{{job.avatar}} size-5 mat-card-avatar"></div>
           <div class="userdet p-2">
-            <h3 class="m-0 font-weight-bold text-dark font-dec-10">Gayathri M</h3>
+            <h3 class="m-0 font-weight-bold text-dark font-dec-10">{{job.name}}</h3>
             <span class="color-light d-flex align-items-center">
               <i class="fa fa-clock-o"></i>
-              <span class="pl-2 font-dec-8">3 min ago</span>
+              <span class="pl-2 font-dec-8">{{job.time}}</span>
             </span>
           </div>
       </div>
-        <button mat-icon-button>
-            <mat-icon class="color-light">more_vert</mat-icon>
-          </button>
+      <button mat-icon-button>
+        <mat-icon class="color-light">more_vert</mat-icon>
+      </button>
     </mat-card-header>
     <mat-card-content>
       <div class="d-flex justify-content-between pt-3">
         <div class="d-flex align-items-center">
           <span class="code mr-3 d-flex align-items-center">
             <i class="fa fa-code text-primary mr-1 font-dec-11"></i>
-            <span class="color-light">Epic Coder</span>  
+            <span class="color-light">{{job.skilllevel}}</span>  
           </span>
           <span class="location color-light">
             <span class="size-2 mr-1 d-inline-flex align-items-center justify-content-center greenbg text-white rounded-circle"><i class="fa fa-map-marker"></i></span>
-            <span>Chennai, India</span>  
+            <span>{{job.location}}</span>  
           </span>
         </div>
         <div>
@@ -35,40 +35,35 @@
             </button>
           </div>
       </div>
-      <h2 class="mt-3 text-dark font-weight-bold font-dec-10 letter-spacing-1">Full Stack Developer</h2>
+      <h2 class="mt-3 text-dark font-weight-bold font-dec-10 letter-spacing-1">{{job.designation}}</h2>
       <div class="mt-3">
-        <span class="mr-2 greenbg text-white d-inline-block rounded-pill p-1 pr-2 pl-2">Full Time</span>
-        <span class="text-dark font-weight-bold ml-2 font-dec-10">$30 / hr</span>
+        <span class="mr-2 greenbg text-white d-inline-block rounded-pill p-1 pr-2 pl-2">{{job.worktype}}</span>
+        <span class="text-dark font-weight-bold ml-2 font-dec-10">{{job.salary}}</span>
       </div>
-      <p class="mt-3 desc mb-3">
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet...</span>
-        <a href="#" class="ml-2">View more</a>
+      <p class="mt-3 mb-3">
+        <span>{{job.description}}</span>
+        <a href="#" class="ml-2" *ngIf="job.viewmore">View more</a>
       </p>
-      
-      <div class="skills pb-2">
-        <span class="mr-2 greenbg d-inline-block rounded-pill p-1 pr-2 pl-2 worktype">HTML</span>
-        <span class="mr-2 greenbg d-inline-block rounded-pill p-1 pr-2 pl-2 worktype">CSS</span>
-        <span class="mr-2 greenbg d-inline-block rounded-pill p-1 pr-2 pl-2 worktype">JAVASCRPT</span>
-        <span class="mr-2 greenbg d-inline-block rounded-pill p-1 pr-2 pl-2 worktype">ANGULAR</span>
-        <span class="mr-2 greenbg d-inline-block rounded-pill p-1 pr-2 pl-2 worktype">NODEJS</span>
-      </div>
+      <ul class="pl-0 pb-3 pt-2">
+        <li *ngFor="let skill of job.skills" class="mr-2 greenbg d-inline-block rounded-pill p-1 pr-2 pl-2 worktype">{{skill}}</li>
+      </ul>
     </mat-card-content>
     <div class="footer d-flex justify-content-between mt-3 pt-2 position-relative">
         <div>
             <button mat-icon-button color="accent">
               <mat-icon>favorite</mat-icon>
             </button>
-            <mat-label>256</mat-label>
+            <mat-label>{{job.likes}}</mat-label>
             <button mat-icon-button color="primary" class="ml-3">
               <mat-icon>comment</mat-icon>
             </button>
-            <mat-label>32</mat-label>
+            <mat-label>{{job.comments}}</mat-label>
         </div>
         <div>
             <button mat-icon-button>
                 <mat-icon>remove_red_eye</mat-icon>
             </button>
-            <mat-label>765</mat-label>
+            <mat-label>{{job.views}}</mat-label>
         </div>
         <span class="bordertop position-absolute"></span>
     </div>

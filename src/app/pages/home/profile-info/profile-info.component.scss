@@ -11,35 +11,13 @@
     }
     .user-specs{
         padding-top: 60px;
-        text-align: center;
-        h3{
-            color: #000000;
-            font-size: 20px;
-            text-transform: capitalize;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        span{
-            color: #686868;
-            font-size: 14px;
-        }
     }
     .user-status{
         list-style-type: none;
-        padding: 15px 0 0 0;;
-        text-align: center;
+        padding: 15px 0 0 0;
         li{
             border-top: 1px solid #e5e5e5;
             padding: 15px 0;
-            h4{
-                color: #686868;
-                font-size: 20px;
-                margin-bottom: 10px;
-            }
-            span{
-                color: #000000;
-                font-size: 20px;
-            }
         }
     }
 }
