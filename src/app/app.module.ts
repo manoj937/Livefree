@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import {MatCardModule, MatInputModule, MatButtonModule, MatSelectModule, MatSnackBarModule,
 MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule, MatMenuModule, MatRadioModule
@@ -72,7 +73,8 @@ const appRoutes: Routes = [
     MatMenuModule,
     MatSnackBarModule,
     FlexLayoutModule,
-    MatRadioModule
+    MatRadioModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

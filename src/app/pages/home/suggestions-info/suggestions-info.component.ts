@@ -29,10 +29,6 @@ export class SuggestionsInfoComponent implements OnInit {
     "name": "Gowtham S",
     "avatar": "gowtham",
     "designation": "Java Developer"
-  },{
-    "name": "Ananya P",
-    "avatar": "ananya",
-    "designation": "UI Developer"
   }];
 
   ngOnInit() {
