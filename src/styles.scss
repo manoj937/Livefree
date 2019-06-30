@@ -103,10 +103,19 @@ mat-card-content{
     -webkit-font-smoothing: antialiased;
 }
 .sample{
-    display: flex;
-    justify-content: center;
+    height: 215px;
+    .card-container{
+        overflow: hidden;
+        height: 100%;
+        margin: 0 40px;
+        #carouse-inner-blk{
+            height: 100%;
+        }
+    }
     mat-card{
         height: 180px;
+        width: 145px;
+        position: absolute;
         button{
             min-width: auto;
             padding: 5px 10px;
@@ -116,7 +125,7 @@ mat-card-content{
     }
     button{
         box-shadow: none !important;
-        top: 45%;
+        top: 48%;
         .mat-button-wrapper{
             padding: 0 !important;
         }

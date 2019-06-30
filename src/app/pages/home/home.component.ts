@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  sum = 0;
   cards = [
     {
       "name": "Gayathri M",
@@ -48,15 +49,20 @@ export class HomeComponent implements OnInit {
       "designation": "Software Developer"
     }
   ];
-  slides: any = [[]];
-  chunk(arr, chunkSize) {
-    let R = [];
-    for (let i = 0, len = arr.length; i < len; i += chunkSize) {
-      R.push(arr.slice(i, i + chunkSize));
-    }
-    return R;
+  
+  ngOnInit() {  
+    setInterval(() => {
+     // document.getElementById('carouse-inner-blk').style.left = 160 + "px";
+    }, 2000);
   }
-  ngOnInit() {
-    this.slides = this.chunk(this.cards, 3);
+
+  ngAfterViewInit(){
+    var cards  = document.getElementById('carouse-inner-blk').children as HTMLCollectionOf<HTMLElement>;
+      for(let i=0;i<this.cards.length;i++){
+        i>0?cards[i].style.left = JSON.stringify(cards[i-1].offsetLeft + cards[i-1].offsetWidth + 15) + "px": 0;
+        this.sum = this.sum + cards[i].offsetWidth; 
+      }
+      document.getElementById('carouse-inner-blk').style.width = this.sum + "px";
   }
+  
 }
